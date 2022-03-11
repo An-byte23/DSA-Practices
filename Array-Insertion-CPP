@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int arr[40];
+    int size,pos,num;
+    cout<<"Enter size of array:"<<endl;
+    cin>>size;
+
+    if (size>40){
+        cout<<"Overflow Condition"<<endl;
+    }
+    else{
+        cout<<"Enter position of element where you wish to enter new number: "<<endl;
+        cin>>pos;
+        if(pos>=size){
+            cout<<"Not possible";
+        }
+        else{
+            cout<<"Enter the number: "<<endl;
+            cin>>num;
+            cout<<"Enter elements of array:"<<endl;
+            for(int i=0;i<size;i++){
+                cin>>arr[i];
+            }
+            for(int j=size-1;j>=pos-1;j--){
+                arr[j+1]=arr[j];
+            }
+            arr[pos-1]=num;
+            size++;
+
+
+            cout<<"Elements of array are:"<<endl;
+            for(int i=0;i<size;i++){
+                cout<<arr[i]<<endl;
+            }
+        }
+    }
+    return 0;
+
+}
