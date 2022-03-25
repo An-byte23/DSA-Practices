@@ -1,0 +1,38 @@
+//Pointers are variables that hold addresses of another variable.
+//Pointers hold address of a single variable but can also store address of cells of array.
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int arr[6] = {5,3,6,4,2,1};
+    int *ptr = arr;
+
+    // Base Address
+    cout<<"Base Address of array is : "<<arr<<endl;
+    cout<<"Base Address of array is : "<<&arr<<endl;
+    cout<<"Base Address of array is : "<<ptr<<endl;
+
+    // Extracting value of array using dereferecing operator
+    cout<<"Value of arr[0] is : "<<*ptr<<endl;
+    cout<<"Value of arr[0] is : "<<arr[0]<<endl;
+
+    // Address of pointer
+    cout<<"Address of pointer is : "<<&ptr<<endl;
+
+    // Incrementing or decrementing
+    for(int i=0;i<6;i++){
+        cout<<"Value of *ptr is : "<<*ptr<<endl;
+        cout<<"Value of ptr is : "<<ptr<<endl;
+        // Incrementing pointer by 1
+        ptr++;
+
+    }
+    
+    //  Accessing element at index 2
+    cout<<"Value of arr[2] is : "<<arr[2]<<endl;
+    cout<<"Value of arr[2] is : "<<2[arr]<<endl;
+    cout<<"Value of arr[2] is : "<<*(arr+2)<<endl;
+
+    return 0;
+}
